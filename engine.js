@@ -37,14 +37,20 @@ console.log(rollinsJimmy.steals);
 
 utleyChase = new player("Chase","Utley", "Phillies", 80313, 6, 6, 1, 2, 1, 0, 0, 1, 0, 0, 0, 0, 0, 	0, 0, 2, 0, 0.257, 0.314, 0.352, 0.666);
 
-console.log(utleyChase.slugging);
+
 // Create input variables
 
-var choosePlayer = function(){
-	var myPlayer = document.getElementById('myPlayer');
-	return myPlayer.options[myPlayer.selectedIndex].text;
-}
+//IDEA USE BRUTE STRENGTH. ASSIGN EACH PLAYER AN ID. GET ID. USE SWITCH STATEMENT TO CALL VARIABLE. REPEAT. So if id(OR TEXT)Jimmy Rollins=Jimmy Rollins, then ex
 
-console.log(choosePlayer())
+function choosePlayer(){
+var myPlayer=document.getElementById("myPlayer");
+if (mylist.options[mylist.selectedIndex].text==="Jimmy Rollins"){
+	console.log(rollinsJimmy.firstname);}
+else if (mylist.options[mylist.selectedIndex].text==="Chase Utley"){
+	console.log(utleyChase.firstname);
+}
+else (console.log('IDK LOL'))
+
+
 
 // Create if/else statements
