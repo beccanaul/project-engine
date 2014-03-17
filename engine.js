@@ -44,12 +44,13 @@ utleyChase = new player("Chase","Utley", "Phillies", 80313, 6, 6, 1, 2, 1, 0, 0,
 
 function choosePlayer(){
 var myPlayer=document.getElementById("myPlayer");
-if (mylist.options[mylist.selectedIndex].text==="Jimmy Rollins"){
+if (myPlayer.options[myPlayer.selectedIndex].text==="Jimmy Rollins"){
 	console.log(rollinsJimmy.firstname);}
-else if (mylist.options[mylist.selectedIndex].text==="Chase Utley"){
+else if (myPlayer.options[myPlayer.selectedIndex].text==="Chase Utley"){
 	console.log(utleyChase.firstname);
 }
-else (console.log('IDK LOL'))
+else (console.log('IDK LOL'));
+}
 
 
 
