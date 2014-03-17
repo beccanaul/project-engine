@@ -38,38 +38,51 @@ utleyChase = new player("Chase","Utley", "Phillies", 80313, 6, 6, 1, 2, 1, 0, 0,
 // Create input variables
 
 //IDEA USE BRUTE STRENGTH. ASSIGN EACH PLAYER AN ID. GET ID. USE SWITCH STATEMENT TO CALL VARIABLE. REPEAT. So if id(OR TEXT)Jimmy Rollins=Jimmy Rollins, then ex
+// function createOutput(){
 
-function choosePlayer(){
-var myPlayer=document.getElementById("myPlayer");
-if (myPlayer.options[myPlayer.selectedIndex].text==="Jimmy Rollins"){
-	console.log(rollinsJimmy.firstname);}
-else if (myPlayer.options[myPlayer.selectedIndex].text==="Chase Utley"){
-	console.log(utleyChase.average);
-}
-else (console.log('IDK LOL'));
-}
+var choosePlayer = function(){
+		var grabPlayer=document.getElementById("grabPlayer");
+		var myPlayer;
+			if (grabPlayer.options[grabPlayer.selectedIndex].text==="Jimmy Rollins")
+			{
+				var myPlayer = rollinsJimmy;
+			}
+			else if (grabPlayer.options[grabPlayer.selectedIndex].text==="Chase Utley")
+			{
+				var myPlayer = utleyChase;
+			}
+			else (console.log('IDK LOL'));
 
-function selectHits (){
-	var checkHits = document.getElementById("hitsCheckbox");
-	if (checkHits.checked == true)
-	{
-		console.log(rollinsJimmy.hits)
-	}
-	else {
-		console.log("NOPE LOL")
-	}
-}
-
-function selectStrikeouts(){
-	var checkStrikeouts = document.getElementById("strikeoutCheckbox");
-	if (checkStrikeouts.checked == true)
+	function selectHits (){
+		var checkHits = document.getElementById("hitsCheckbox");
+		if (checkHits.checked == true)
 		{
-			console.log(rollinsJimmy.strikeouts)
+		return myPlayer.hits
 		}
-	else {
-		console.log("STILL NOPE DUMMY")
+		else {
+		return ""
+		}
 	}
+
+	function selectStrikeouts(){
+		var checkStrikeouts = document.getElementById("strikeoutCheckbox");
+		if (checkStrikeouts.checked == true)
+			{
+				return myPlayer.strikeouts
+			}
+		else 
+		{
+			return ""
+		}
+	}
+	console.log(myPlayer.firstname+" "+myPlayer.lastname+" " +selectHits()+" "+selectStrikeouts())
 }
+
+
+	
+
+// console.log(selectName()+selectHits()+selectStrikeouts())
+// }
 // $("div").append(userSentence);
 
 // Create if/else statements
