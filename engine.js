@@ -31,9 +31,6 @@ this.ops=ops;
 
 rollinsJimmy = new player("Jimmy","Rollins", "Phillies", 80313, 6, 6, 1, 2, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 2, 0, 0.257, 0.314, 0.352, 0.666);
 
-console.log(rollinsJimmy.slugging);
-console.log(rollinsJimmy.steals);
-
 
 utleyChase = new player("Chase","Utley", "Phillies", 80313, 6, 6, 1, 2, 1, 0, 0, 1, 0, 0, 0, 0, 0, 	0, 0, 2, 0, 0.257, 0.314, 0.352, 0.666);
 
@@ -45,13 +42,17 @@ utleyChase = new player("Chase","Utley", "Phillies", 80313, 6, 6, 1, 2, 1, 0, 0,
 function choosePlayer(){
 var myPlayer=document.getElementById("myPlayer");
 if (myPlayer.options[myPlayer.selectedIndex].text==="Jimmy Rollins"){
-	console.log(rollinsJimmy.firstname);}
+	console.log(rollinsJimmy.ops);}
 else if (myPlayer.options[myPlayer.selectedIndex].text==="Chase Utley"){
-	console.log(utleyChase.firstname);
+	console.log(utleyChase.average);
 }
 else (console.log('IDK LOL'));
 }
 
 
+function user (selectedPlayer, stat1){
+	this.selectedPlayer=choosePlayer;
+	stat1=player.average;
+}
 
 // Create if/else statements
