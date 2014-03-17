@@ -42,17 +42,34 @@ utleyChase = new player("Chase","Utley", "Phillies", 80313, 6, 6, 1, 2, 1, 0, 0,
 function choosePlayer(){
 var myPlayer=document.getElementById("myPlayer");
 if (myPlayer.options[myPlayer.selectedIndex].text==="Jimmy Rollins"){
-	console.log(rollinsJimmy.ops);}
+	console.log(rollinsJimmy.firstname);}
 else if (myPlayer.options[myPlayer.selectedIndex].text==="Chase Utley"){
 	console.log(utleyChase.average);
 }
 else (console.log('IDK LOL'));
 }
 
-
-function user (selectedPlayer, stat1){
-	this.selectedPlayer=choosePlayer;
-	stat1=player.average;
+function selectHits (){
+	var checkHits = document.getElementById("hitsCheckbox");
+	if (checkHits.checked == true)
+	{
+		console.log(rollinsJimmy.hits)
+	}
+	else {
+		console.log("NOPE LOL")
+	}
 }
+
+function selectStrikeouts(){
+	var checkStrikeouts = document.getElementById("strikeoutCheckbox");
+	if (checkStrikeouts.checked == true)
+		{
+			console.log(rollinsJimmy.strikeouts)
+		}
+	else {
+		console.log("STILL NOPE DUMMY")
+	}
+}
+// $("div").append(userSentence);
 
 // Create if/else statements
